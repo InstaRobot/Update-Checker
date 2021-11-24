@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505160B2274E99AB00AEEDE8 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505160B1274E99AB00AEEDE8 /* Checker.swift */; };
 		505D13E8274E351C0065C810 /* UpdateChecker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 505D13E7274E351C0065C810 /* UpdateChecker.docc */; };
 		505D13EE274E351C0065C810 /* UpdateChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D13E3274E351C0065C810 /* UpdateChecker.framework */; };
 		505D13F3274E351C0065C810 /* UpdateCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D13F2274E351C0065C810 /* UpdateCheckerTests.swift */; };
 		505D13F4274E351C0065C810 /* UpdateChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 505D13E6274E351C0065C810 /* UpdateChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		505D13FF274E35F60065C810 /* UpdateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D13FE274E35F60065C810 /* UpdateConfigurator.swift */; };
+		505D13FF274E35F60065C810 /* UpdateConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D13FE274E35F60065C810 /* UpdateConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,12 +26,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		505160B1274E99AB00AEEDE8 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		505D13E3274E351C0065C810 /* UpdateChecker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpdateChecker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		505D13E6274E351C0065C810 /* UpdateChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateChecker.h; sourceTree = "<group>"; };
 		505D13E7274E351C0065C810 /* UpdateChecker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UpdateChecker.docc; sourceTree = "<group>"; };
 		505D13ED274E351C0065C810 /* UpdateCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpdateCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		505D13F2274E351C0065C810 /* UpdateCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheckerTests.swift; sourceTree = "<group>"; };
-		505D13FE274E35F60065C810 /* UpdateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateConfigurator.swift; sourceTree = "<group>"; };
+		505D13FE274E35F60065C810 /* UpdateConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,8 @@
 		505D13FD274E35D40065C810 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				505D13FE274E35F60065C810 /* UpdateConfigurator.swift */,
+				505D13FE274E35F60065C810 /* UpdateConfiguration.swift */,
+				505160B1274E99AB00AEEDE8 /* Checker.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -206,8 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505160B2274E99AB00AEEDE8 /* Checker.swift in Sources */,
 				505D13E8274E351C0065C810 /* UpdateChecker.docc in Sources */,
-				505D13FF274E35F60065C810 /* UpdateConfigurator.swift in Sources */,
+				505D13FF274E35F60065C810 /* UpdateConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

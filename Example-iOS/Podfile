@@ -6,7 +6,7 @@ target 'Example-iOS' do
   use_frameworks!
 
   # Pods for Example-iOS
-  pod 'UpdateChecker', :path => '../'
+  # pod 'UpdateChecker', :path => '../'
   pod 'netfox'
 
 end

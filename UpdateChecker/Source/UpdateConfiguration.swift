@@ -1,5 +1,5 @@
 //
-//  UpdateConfigurator.swift
+//  UpdateConfiguration.swift
 //  UpdateChecker
 //
 //  Created by Vitaliy Podolskiy on 24.11.2021.
@@ -8,10 +8,9 @@
 
 import Foundation
 
-public struct UpdateConfigurator {
-    private var bundleIdentifier: String
+public struct UpdateConfiguration {
+    private(set) var bundleIdentifier: String
     
-    @discardableResult
     public init(bundleIdentifier: String) {
         self.bundleIdentifier = bundleIdentifier
     }

@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+import UpdateChecker
 
 struct ContentView: View {
     var body: some View {
-        Text("Shake Device for view log!")
+        Text("Shake your device for view log!!!")
             .padding()
+            .onAppear {
+                self.startChecker()
+            }
+    }
+    
+    private func startChecker() {
+        let configuration = UpdateConfiguration(
+            bundleIdentifier: "io.itforces.ios.timetable"
+        )
+        let checker = Checker(with: configuration)
+        checker.start()
     }
 }
 
