@@ -2,9 +2,13 @@ Pod::Spec.new do |s|
   s.name                  = 'UpdateChecker'
   s.version               = '1.0'
   s.swift_version         = '5.1', '5.2', '5.3', '5.4', '5.5'
-  s.summary               = 'Simple app version ckecker from AppStore'
+  s.summary               = 'Simple app version checker from AppStore'
   s.homepage              = 'https://github.com/InstaRobot/Update-Checker'
+  s.license               = 'MIT'
   s.author                = { 'Vitaliy Podolskiy' => 'instarobot.net@gmail.com' }
+  s.description           = <<-DESC
+                            Simple app version checker from AppStore.
+                            DESC
   s.source                = { :git => 'https://github.com/InstaRobot/Update-Checker.git', :tag => s.version.to_s }
   s.platform              = :ios
   s.ios.deployment_target = '12.0'
