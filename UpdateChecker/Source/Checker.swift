@@ -8,6 +8,8 @@
 
 import Foundation
 
+let k_CheckDateInited = "k_CheckDateInited"
+
 public struct Checker {
     private var configuration: UpdateConfiguration
     
@@ -17,6 +19,18 @@ public struct Checker {
     
     public func start() {
         assert(!configuration.bundleIdentifier.isEmpty)
+        
+        if let date = UserDefaults.standard.object(forKey: k_CheckDateInited) as? Date {
+            print(date)
+        }
+        else {
+            UserDefaults.standard.set(
+                Date(),
+                forKey: k_CheckDateInited
+            )
+            UserDefaults.standard.synchronize()
+            start()
+        }
         
         print(#function)
     }

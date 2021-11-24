@@ -19,7 +19,8 @@ struct ContentView: View {
     
     private func startChecker() {
         let configuration = UpdateConfiguration(
-            bundleIdentifier: "io.itforces.ios.timetable"
+            bundleIdentifier: "io.itforces.ios.timetable",
+            daysBeforeCheck: 0
         )
         let checker = Checker(with: configuration)
         checker.start()

@@ -10,8 +10,13 @@ import Foundation
 
 public struct UpdateConfiguration {
     private(set) var bundleIdentifier: String
+    private(set) var daysBeforeCheck: Int
     
-    public init(bundleIdentifier: String) {
+    public init(
+        bundleIdentifier: String,
+        daysBeforeCheck: Int = 0
+    ) {
         self.bundleIdentifier = bundleIdentifier
+        self.daysBeforeCheck  = daysBeforeCheck
     }
 }
