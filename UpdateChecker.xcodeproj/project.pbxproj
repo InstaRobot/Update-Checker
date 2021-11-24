@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502B70E3274EF460004670CD /* Siren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70CC274EF460004670CD /* Siren.swift */; };
+		502B70E4274EF460004670CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70CE274EF460004670CD /* APIManager.swift */; };
+		502B70E5274EF460004670CD /* RulesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70CF274EF460004670CD /* RulesManager.swift */; };
+		502B70E6274EF460004670CD /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D0274EF460004670CD /* PresentationManager.swift */; };
+		502B70E7274EF460004670CD /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D2274EF460004670CD /* AlertAction.swift */; };
+		502B70E8274EF460004670CD /* AlertConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D3274EF460004670CD /* AlertConstants.swift */; };
+		502B70E9274EF460004670CD /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D4274EF460004670CD /* Localization.swift */; };
+		502B70EA274EF460004670CD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D5274EF460004670CD /* Model.swift */; };
+		502B70EB274EF460004670CD /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D6274EF460004670CD /* APIModel.swift */; };
+		502B70EC274EF460004670CD /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D7274EF460004670CD /* Rules.swift */; };
+		502B70ED274EF460004670CD /* AppStoreCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D8274EF460004670CD /* AppStoreCountry.swift */; };
+		502B70EE274EF460004670CD /* PerformCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D9274EF460004670CD /* PerformCheck.swift */; };
+		502B70EF274EF460004670CD /* UpdateResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70DA274EF460004670CD /* UpdateResults.swift */; };
+		502B70F0274EF460004670CD /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70DC274EF460004670CD /* UIAlertControllerExtension.swift */; };
+		502B70F1274EF460004670CD /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70DD274EF460004670CD /* BundleExtension.swift */; };
+		502B70F2274EF460004670CD /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70DE274EF460004670CD /* UserDefaultsExtension.swift */; };
+		502B70F3274EF460004670CD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70DF274EF460004670CD /* DateExtension.swift */; };
+		502B70F4274EF460004670CD /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70E1274EF460004670CD /* DataParser.swift */; };
+		502B70F5274EF460004670CD /* KnownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70E2274EF460004670CD /* KnownError.swift */; };
 		505160B2274E99AB00AEEDE8 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505160B1274E99AB00AEEDE8 /* Checker.swift */; };
 		505D13E8274E351C0065C810 /* UpdateChecker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 505D13E7274E351C0065C810 /* UpdateChecker.docc */; };
 		505D13EE274E351C0065C810 /* UpdateChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D13E3274E351C0065C810 /* UpdateChecker.framework */; };
@@ -26,6 +45,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		502B70CC274EF460004670CD /* Siren.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Siren.swift; sourceTree = "<group>"; };
+		502B70CE274EF460004670CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		502B70CF274EF460004670CD /* RulesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesManager.swift; sourceTree = "<group>"; };
+		502B70D0274EF460004670CD /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
+		502B70D2274EF460004670CD /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		502B70D3274EF460004670CD /* AlertConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertConstants.swift; sourceTree = "<group>"; };
+		502B70D4274EF460004670CD /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		502B70D5274EF460004670CD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		502B70D6274EF460004670CD /* APIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		502B70D7274EF460004670CD /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		502B70D8274EF460004670CD /* AppStoreCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreCountry.swift; sourceTree = "<group>"; };
+		502B70D9274EF460004670CD /* PerformCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformCheck.swift; sourceTree = "<group>"; };
+		502B70DA274EF460004670CD /* UpdateResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateResults.swift; sourceTree = "<group>"; };
+		502B70DC274EF460004670CD /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		502B70DD274EF460004670CD /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		502B70DE274EF460004670CD /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		502B70DF274EF460004670CD /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		502B70E1274EF460004670CD /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		502B70E2274EF460004670CD /* KnownError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnownError.swift; sourceTree = "<group>"; };
 		505160B1274E99AB00AEEDE8 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		505D13E3274E351C0065C810 /* UpdateChecker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpdateChecker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		505D13E6274E351C0065C810 /* UpdateChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateChecker.h; sourceTree = "<group>"; };
@@ -54,6 +92,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		502B70CD274EF460004670CD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				502B70CE274EF460004670CD /* APIManager.swift */,
+				502B70CF274EF460004670CD /* RulesManager.swift */,
+				502B70D0274EF460004670CD /* PresentationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		502B70D1274EF460004670CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				502B70D2274EF460004670CD /* AlertAction.swift */,
+				502B70D3274EF460004670CD /* AlertConstants.swift */,
+				502B70D4274EF460004670CD /* Localization.swift */,
+				502B70D5274EF460004670CD /* Model.swift */,
+				502B70D6274EF460004670CD /* APIModel.swift */,
+				502B70D7274EF460004670CD /* Rules.swift */,
+				502B70D8274EF460004670CD /* AppStoreCountry.swift */,
+				502B70D9274EF460004670CD /* PerformCheck.swift */,
+				502B70DA274EF460004670CD /* UpdateResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		502B70DB274EF460004670CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				502B70DC274EF460004670CD /* UIAlertControllerExtension.swift */,
+				502B70DD274EF460004670CD /* BundleExtension.swift */,
+				502B70DE274EF460004670CD /* UserDefaultsExtension.swift */,
+				502B70DF274EF460004670CD /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		502B70E0274EF460004670CD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				502B70E1274EF460004670CD /* DataParser.swift */,
+				502B70E2274EF460004670CD /* KnownError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		505D13D9274E351C0065C810 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +179,11 @@
 			children = (
 				505D13FE274E35F60065C810 /* UpdateConfiguration.swift */,
 				505160B1274E99AB00AEEDE8 /* Checker.swift */,
+				502B70DB274EF460004670CD /* Extensions */,
+				502B70CD274EF460004670CD /* Managers */,
+				502B70D1274EF460004670CD /* Models */,
+				502B70CC274EF460004670CD /* Siren.swift */,
+				502B70E0274EF460004670CD /* Utilities */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -210,8 +299,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				505160B2274E99AB00AEEDE8 /* Checker.swift in Sources */,
+				502B70F3274EF460004670CD /* DateExtension.swift in Sources */,
+				502B70E5274EF460004670CD /* RulesManager.swift in Sources */,
+				502B70EC274EF460004670CD /* Rules.swift in Sources */,
+				502B70F2274EF460004670CD /* UserDefaultsExtension.swift in Sources */,
+				502B70F4274EF460004670CD /* DataParser.swift in Sources */,
+				502B70EF274EF460004670CD /* UpdateResults.swift in Sources */,
+				502B70E7274EF460004670CD /* AlertAction.swift in Sources */,
 				505D13E8274E351C0065C810 /* UpdateChecker.docc in Sources */,
+				502B70EB274EF460004670CD /* APIModel.swift in Sources */,
+				502B70E6274EF460004670CD /* PresentationManager.swift in Sources */,
+				502B70E4274EF460004670CD /* APIManager.swift in Sources */,
+				502B70E9274EF460004670CD /* Localization.swift in Sources */,
 				505D13FF274E35F60065C810 /* UpdateConfiguration.swift in Sources */,
+				502B70F5274EF460004670CD /* KnownError.swift in Sources */,
+				502B70F1274EF460004670CD /* BundleExtension.swift in Sources */,
+				502B70EE274EF460004670CD /* PerformCheck.swift in Sources */,
+				502B70F0274EF460004670CD /* UIAlertControllerExtension.swift in Sources */,
+				502B70EA274EF460004670CD /* Model.swift in Sources */,
+				502B70E3274EF460004670CD /* Siren.swift in Sources */,
+				502B70ED274EF460004670CD /* AppStoreCountry.swift in Sources */,
+				502B70E8274EF460004670CD /* AlertConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
