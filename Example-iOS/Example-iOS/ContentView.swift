@@ -10,7 +10,7 @@ import UpdateChecker
 
 struct ContentView: View {
     var body: some View {
-        Text("Shake your device for view log!!!")
+        Text("Shake your device to view log!!!")
             .padding()
             .onAppear {
                 self.startChecker()
@@ -20,7 +20,7 @@ struct ContentView: View {
     private func startChecker() {
         let configuration = UpdateConfiguration(
             bundleIdentifier: "io.itforces.ios.timetable",
-            daysBeforeCheck: 0
+            daysBeforeCheck: 7
         )
         let checker = Checker(with: configuration)
         checker.start()
