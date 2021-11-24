@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import netfox
 
 @main
 struct Example_iOSApp: App {
+    init() {
+        startNetfox()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+    }
+    
+    private func startNetfox() {
+        NFX.sharedInstance().start()
     }
 }
