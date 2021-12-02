@@ -31,11 +31,6 @@ public enum KnownError: LocalizedError {
     /// No new update available.
     case noUpdateAvailable
     /// Siren will not present an update alert if it performed one too recently. If you would like to present an alert every time Siren is called, please consider setting the `UpdatePromptFrequency.immediately` rule in `RulesManager`
-    case recentlyPrompted
-    /// The app has been released for X days, but Siren cannot prompt the user until Y (where Y > X) days have passed.
-    case releasedTooSoon(daysSinceRelease: Int, releasedForDays: Int)
-    /// The user has opted to skip updating their current version of the app to the current App Store version.
-    case skipVersionUpdate(installedVersion: String, appStoreVersion: String)
 
     /// The localized description for each error handled by Siren.
     public var localizedDescription: String {
@@ -62,12 +57,6 @@ public enum KnownError: LocalizedError {
             return "\(KnownError.sirenError) Please make sure that you have set a `Bundle Identifier` in your project."
         case .noUpdateAvailable:
             return "\(KnownError.sirenError) No new update available."
-        case .recentlyPrompted:
-            return "\(KnownError.sirenError) Siren will not present an update alert if it performed one too recently. If you would like to present an alert every time Siren is called, please consider setting the `\(Rules.UpdatePromptFrequency.self).immediately` rule in `\(RulesManager.self)`"
-        case .releasedTooSoon(let daysSinceRelease, let releasedForDays):
-            return "\(KnownError.sirenError) The app has been released for \(daysSinceRelease) days, but Siren cannot prompt the user until \(releasedForDays) days have passed."
-        case .skipVersionUpdate(let installedVersion, let appStoreVersion):
-            return "\(KnownError.sirenError) The user has opted to skip updating their current version of the app (\(installedVersion)) to the current App Store version (\(appStoreVersion))."
         }
     }
 

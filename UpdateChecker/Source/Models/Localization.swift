@@ -123,46 +123,4 @@ public struct Localization {
 
         self.forceLanguage = forceLanguage
     }
-
-    /// The localized string for the `UIAlertController`'s message field.  .
-    ///
-    /// - Returns: A localized string for the update message.
-    public func alertMessage(forCurrentAppStoreVersion currentAppStoreVersion: String) -> String {
-        let message = Bundle.localizedString(forKey: AlertConstants.alertMessage,
-                                             andForceLocalization: forceLanguage)
-
-        return String(format: message, appName, currentAppStoreVersion)
-    }
-
-    /// The localized string for the `UIAlertController`'s title field.  .
-    ///
-    /// - Returns: A localized string for the phrase "Update Available".
-    public func alertTitle() -> String {
-        return Bundle.localizedString(forKey: AlertConstants.alertTitle,
-                                      andForceLocalization: forceLanguage)
-    }
-
-    /// The localized string for the "Next time" `UIAlertAction`.
-    ///
-    /// - Returns: A localized string for the phrase "Next time".
-    public func nextTimeButtonTitle() -> String {
-        return Bundle.localizedString(forKey: AlertConstants.nextTimeButtonTitle,
-                                      andForceLocalization: forceLanguage)
-    }
-
-    /// The localized string for the "Skip this version" `UIAlertAction`.
-    ///
-    /// - Returns: A localized string for the phrase "Skip this version".
-    public func skipButtonTitle() -> String {
-        return Bundle.localizedString(forKey: AlertConstants.skipButtonTitle,
-                                      andForceLocalization: forceLanguage)
-    }
-
-    /// The localized string for the "Update" `UIAlertAction`.
-    ///
-    /// - Returns: A localized string for the phrase "Update".
-    public func updateButtonTitle() -> String {
-        return Bundle.localizedString(forKey: AlertConstants.updateButtonTitle,
-                                      andForceLocalization: forceLanguage)
-    }
 }

@@ -26,13 +26,10 @@ public struct Checker {
             let result = calendar.compare(date, to: Date(), toGranularity: .day)
             switch result {
             case .orderedAscending, .orderedSame:
-                Siren.shared.wail(performCheck: .onDemand) { result in
+                Siren.shared.wail { result in
                     switch result {
                     case .success(let updateResults):
-                        print("AlertAction ", updateResults.alertAction)
-                        print("Localization ", updateResults.localization)
                         print("Model ", updateResults.model)
-                        print("UpdateType ", updateResults.updateType)
                     case .failure(let error):
                         print(error.localizedDescription)
                     }
