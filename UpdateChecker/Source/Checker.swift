@@ -9,6 +9,7 @@
 import Foundation
 
 let k_CheckDateInited = "k_CheckDateInited"
+
 public typealias ResultsHandler = (Result<UpdateResults, KnownError>) -> Void
 
 public struct Checker {

@@ -8,28 +8,15 @@
 
 import UIKit
 
-/// The Siren Class.
 public final class Siren: NSObject {
-    /// Return results or errors obtained from performing a version check with Siren.
     public typealias ResultsHandler = (Result<UpdateResults, KnownError>) -> Void
+    static let shared = Siren()
 
-    /// The Siren singleton. The main point of entry to the Siren library.
-    public static let shared = Siren()
-
-    /// The manager that controls the App Store API that is
-    /// used to fetch the latest version of the app.
-    ///
-    /// Defaults to the US App Store.
-    public lazy var apiManager: APIManager = .default
-
-    /// The current installed version of your app.
+    lazy var apiManager: APIManager = .default
     lazy var currentInstalledVersion: String? = Bundle.version()
 
-    /// The App Store's unique identifier for an app.
     private var appID: Int?
     private var configuration: UpdateConfiguration!
-
-    /// The completion handler used to return the results or errors returned by Siren.
     private var resultsHandler: ResultsHandler?
 }
 

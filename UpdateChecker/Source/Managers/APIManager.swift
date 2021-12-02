@@ -14,8 +14,6 @@ public struct APIManager {
     private struct Constants {
         /// Constant for the `bundleId` parameter in the iTunes Lookup API request.
         static let bundleID = "bundleId"
-        /// Constant for the `country` parameter in the iTunes Lookup API request.
-        static let country = "country"
         /// Constant for the `entity` parameter in the iTunes Lookup API reqeust.
         static let entity = "entity"
     }
@@ -82,7 +80,8 @@ extension APIManager {
                 DispatchQueue.main.async {
                     handler?(.success(apiModel))
                 }
-            } catch {
+            }
+            catch {
                 handler?(.failure(.appStoreJSONParsingFailure(underlyingError: error)))
             }
         }
