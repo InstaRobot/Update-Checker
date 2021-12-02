@@ -22,7 +22,14 @@ struct ContentView: View {
             bundleIdentifier: "io.itforces.ios.timetable",
             daysBeforeCheck: 0
         )
-        let checker = Checker(with: configuration)
+        let checker = Checker(with: configuration) { results in
+            switch results {
+            case .success(let updateResults):
+                print(updateResults)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         checker.check()
     }
 }

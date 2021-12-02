@@ -15,7 +15,7 @@ public struct Checker {
     public var resultsHandler: ResultsHandler
     private var configuration: UpdateConfiguration
     
-    public init(with configuration: UpdateConfiguration, results: ResultsHandler) {
+    public init(with configuration: UpdateConfiguration, results: @escaping ResultsHandler) {
         self.configuration  = configuration
         self.resultsHandler = results
     }
@@ -31,9 +31,10 @@ public struct Checker {
                     switch result {
                     case .success(let updateResults):
                         print("Model ", updateResults.model)
-                        self.resultsHandler()
+                        self.resultsHandler(.success(updateResults))
                     case .failure(let error):
                         print(error.localizedDescription)
+                        self.resultsHandler(.failure(error))
                     }
                 }
             default:
