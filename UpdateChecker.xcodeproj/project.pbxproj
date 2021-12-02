@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		502B70E3274EF460004670CD /* Siren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70CC274EF460004670CD /* Siren.swift */; };
 		502B70E4274EF460004670CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70CE274EF460004670CD /* APIManager.swift */; };
-		502B70E9274EF460004670CD /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D4274EF460004670CD /* Localization.swift */; };
 		502B70EA274EF460004670CD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D5274EF460004670CD /* Model.swift */; };
 		502B70EB274EF460004670CD /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D6274EF460004670CD /* APIModel.swift */; };
 		502B70ED274EF460004670CD /* AppStoreCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D8274EF460004670CD /* AppStoreCountry.swift */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		502B70CC274EF460004670CD /* Siren.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Siren.swift; sourceTree = "<group>"; };
 		502B70CE274EF460004670CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		502B70D4274EF460004670CD /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		502B70D5274EF460004670CD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		502B70D6274EF460004670CD /* APIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		502B70D8274EF460004670CD /* AppStoreCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreCountry.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 		502B70D1274EF460004670CD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				502B70D4274EF460004670CD /* Localization.swift */,
 				502B70D5274EF460004670CD /* Model.swift */,
 				502B70D6274EF460004670CD /* APIModel.swift */,
 				502B70D8274EF460004670CD /* AppStoreCountry.swift */,
@@ -285,7 +282,6 @@
 				505D13E8274E351C0065C810 /* UpdateChecker.docc in Sources */,
 				502B70EB274EF460004670CD /* APIModel.swift in Sources */,
 				502B70E4274EF460004670CD /* APIManager.swift in Sources */,
-				502B70E9274EF460004670CD /* Localization.swift in Sources */,
 				505D13FF274E35F60065C810 /* UpdateConfiguration.swift in Sources */,
 				502B70F5274EF460004670CD /* KnownError.swift in Sources */,
 				502B70F1274EF460004670CD /* BundleExtension.swift in Sources */,

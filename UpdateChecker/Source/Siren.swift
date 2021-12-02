@@ -36,6 +36,7 @@ public final class Siren: NSObject {
 
     /// The App Store's unique identifier for an app.
     private var appID: Int?
+    private var configuration: UpdateConfiguration!
 
     /// The completion handler used to return the results or errors returned by Siren.
     private var resultsHandler: ResultsHandler?
@@ -48,7 +49,8 @@ public extension Siren {
     ///
     /// - Parameters:
     ///   - handler: Returns the metadata around a successful version check and interaction with the update modal or it returns nil.
-    func wail(completion handler: ResultsHandler? = nil) {
+    func wail(configuration: UpdateConfiguration, completion handler: ResultsHandler? = nil) {
+        self.configuration  = configuration
         resultsHandler = handler
         performVersionCheck()
     }

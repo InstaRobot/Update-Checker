@@ -18,15 +18,13 @@ public struct Checker {
     }
     
     public func start() {
-        assert(!configuration.bundleIdentifier.isEmpty)
-        
         if var date = UserDefaults.standard.object(forKey: k_CheckDateInited) as? Date {
             let calendar = Calendar.current
             date = calendar.date(byAdding: .day, value: configuration.daysBeforeCheck, to: date) ?? date
             let result = calendar.compare(date, to: Date(), toGranularity: .day)
             switch result {
             case .orderedAscending, .orderedSame:
-                Siren.shared.wail { result in
+                Siren.shared.wail(configuration: configuration) { result in
                     switch result {
                     case .success(let updateResults):
                         print("Model ", updateResults.model)
@@ -47,5 +45,9 @@ public struct Checker {
             UserDefaults.standard.synchronize()
             start()
         }
+    }
+    
+    public func launchAppStore() {
+        Siren.shared.launchAppStore()
     }
 }
