@@ -70,13 +70,17 @@ public struct RulesManager {
     /// - Parameters:
     ///   - rules: The rules that should be set for all version updates.
     ///   - releasedForDays: The amount of time (in days) that the app should delay before presenting the user
-    public init(globalRules rules: Rules = .default,
-                showAlertAfterCurrentVersionHasBeenReleasedForDays releasedForDays: Int = 1) {
-        self.init(majorUpdateRules: rules,
-                  minorUpdateRules: rules,
-                  patchUpdateRules: rules,
-                  revisionUpdateRules: rules,
-                  showAlertAfterCurrentVersionHasBeenReleasedForDays: releasedForDays)
+    public init(
+        globalRules rules: Rules = .default,
+        showAlertAfterCurrentVersionHasBeenReleasedForDays releasedForDays: Int = 1
+    ) {
+        self.init(
+            majorUpdateRules: rules,
+            minorUpdateRules: rules,
+            patchUpdateRules: rules,
+            revisionUpdateRules: rules,
+            showAlertAfterCurrentVersionHasBeenReleasedForDays: releasedForDays
+        )
     }
 
     /// Returns the appropriate update rules based on the type of version that is returned from the API.

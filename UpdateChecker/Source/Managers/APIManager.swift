@@ -78,10 +78,12 @@ extension APIManager {
     ///   - response: The response metadata returned from the request.
     ///   - error: The error returned from the request.
     ///   - handler: The completion handler to call once the results of the request has been processed.
-    private func processVersionCheckResults(withData data: Data?,
-                                            response: URLResponse?,
-                                            error: Error?,
-                                            completion handler: CompletionHandler?) {
+    private func processVersionCheckResults(
+        withData data: Data?,
+        response: URLResponse?,
+        error: Error?,
+        completion handler: CompletionHandler?
+    ) {
         if let error = error {
             handler?(.failure(.appStoreDataRetrievalFailure(underlyingError: error)))
         } else {
