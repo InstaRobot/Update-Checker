@@ -23,7 +23,7 @@ struct ContentView: View {
             daysBeforeCheck: 7
         )
         let checker = Checker(with: configuration)
-        checker.start()
+        checker.check()
     }
 }
 

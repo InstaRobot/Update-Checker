@@ -25,15 +25,6 @@ public final class Siren: NSObject {
     /// The current installed version of your app.
     lazy var currentInstalledVersion: String? = Bundle.version()
 
-    /// The retained `NotificationCenter` observer that listens for `UIApplication.didBecomeActiveNotification` notifications.
-    var applicationDidBecomeActiveObserver: NSObjectProtocol?
-
-    /// The retained `NotificationCenter` observer that listens for `UIApplication.willResignActiveNotification` notifications.
-    var applicationWillResignActiveObserver: NSObjectProtocol?
-
-    /// The retained `NotificationCenter` observer that listens for `UIApplication.didEnterBackgroundNotification` notifications.
-    var applicationDidEnterBackgroundObserver: NSObjectProtocol?
-
     /// The App Store's unique identifier for an app.
     private var appID: Int?
     private var configuration: UpdateConfiguration!
@@ -49,10 +40,13 @@ public extension Siren {
     ///
     /// - Parameters:
     ///   - handler: Returns the metadata around a successful version check and interaction with the update modal or it returns nil.
-    func wail(configuration: UpdateConfiguration, completion handler: ResultsHandler? = nil) {
+    func check(
+        configuration: UpdateConfiguration,
+        completion handler: ResultsHandler? = nil
+    ) {
         self.configuration  = configuration
-        resultsHandler = handler
-        performVersionCheck()
+        self.resultsHandler = handler
+        self.performVersionCheck()
     }
 
     /// Launches the AppStore in two situations when the user clicked the `Update` button in the UIAlertController modal.
@@ -77,7 +71,7 @@ public extension Siren {
 private extension Siren {
     /// Initiates the unidirectional version checking flow.
     func performVersionCheck() {
-        apiManager.performVersionCheckRequest { result in
+        apiManager.performVersionCheckRequest(configuration: configuration) { result in
             switch result {
             case .success(let apiModel):
                 self.validate(apiModel: apiModel)
@@ -115,8 +109,8 @@ private extension Siren {
         
         // Check the release date of the current version.
         guard let currentVersionReleaseDate = apiModel.results.first?.currentVersionReleaseDate else {
-                resultsHandler?(.failure(.currentVersionReleaseDate))
-                return
+            resultsHandler?(.failure(.currentVersionReleaseDate))
+            return
         }
 
         // Check if the App Store version is newer than the currently installed version.
@@ -126,11 +120,13 @@ private extension Siren {
             return
         }
 
-        let model = Model(appID: appID,
-                          currentVersionReleaseDate: currentVersionReleaseDate,
-                          minimumOSVersion: results.minimumOSVersion,
-                          releaseNotes: results.releaseNotes,
-                          version: results.version)
+        let model = Model(
+            appID: appID,
+            currentVersionReleaseDate: currentVersionReleaseDate,
+            minimumOSVersion: results.minimumOSVersion,
+            releaseNotes: results.releaseNotes,
+            version: results.version
+        )
         
         resultsHandler?(.success(UpdateResults(model: model)))
     }

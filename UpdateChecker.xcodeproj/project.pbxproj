@@ -11,7 +11,6 @@
 		502B70E4274EF460004670CD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70CE274EF460004670CD /* APIManager.swift */; };
 		502B70EA274EF460004670CD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D5274EF460004670CD /* Model.swift */; };
 		502B70EB274EF460004670CD /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D6274EF460004670CD /* APIModel.swift */; };
-		502B70ED274EF460004670CD /* AppStoreCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70D8274EF460004670CD /* AppStoreCountry.swift */; };
 		502B70EF274EF460004670CD /* UpdateResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70DA274EF460004670CD /* UpdateResults.swift */; };
 		502B70F1274EF460004670CD /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70DD274EF460004670CD /* BundleExtension.swift */; };
 		502B70F3274EF460004670CD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B70DF274EF460004670CD /* DateExtension.swift */; };
@@ -41,7 +40,6 @@
 		502B70CE274EF460004670CD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		502B70D5274EF460004670CD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		502B70D6274EF460004670CD /* APIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
-		502B70D8274EF460004670CD /* AppStoreCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreCountry.swift; sourceTree = "<group>"; };
 		502B70DA274EF460004670CD /* UpdateResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateResults.swift; sourceTree = "<group>"; };
 		502B70DD274EF460004670CD /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		502B70DF274EF460004670CD /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 			children = (
 				502B70D5274EF460004670CD /* Model.swift */,
 				502B70D6274EF460004670CD /* APIModel.swift */,
-				502B70D8274EF460004670CD /* AppStoreCountry.swift */,
 				502B70DA274EF460004670CD /* UpdateResults.swift */,
 			);
 			path = Models;
@@ -287,7 +284,6 @@
 				502B70F1274EF460004670CD /* BundleExtension.swift in Sources */,
 				502B70EA274EF460004670CD /* Model.swift in Sources */,
 				502B70E3274EF460004670CD /* Siren.swift in Sources */,
-				502B70ED274EF460004670CD /* AppStoreCountry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

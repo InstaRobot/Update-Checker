@@ -18,22 +18,10 @@ public struct APIManager {
         static let country = "country"
         /// Constant for the `entity` parameter in the iTunes Lookup API reqeust.
         static let entity = "entity"
-        /// Constant for the `entity` parameter value when performing a tvOS iTunes Lookup API reqeust.
-        static let tvSoftware = "tvSoftware"
     }
 
     /// Return results or errors obtained from performing a version check with Siren.
     typealias CompletionHandler = (Result<APIModel, KnownError>) -> Void
-
-    /// The region or country of an App Store in which the app is available.
-    let country: AppStoreCountry
-
-    /// Initializes `APIManager` to the region or country of an App Store in which the app is available.
-    /// By default, all version check requests are performed against the US App Store.
-    /// - Parameter country: The country for the App Store in which the app is available.
-    public init(country: AppStoreCountry = .unitedStates) {
-      self.country = country
-    }
 
     /// The default `APIManager`.
     ///
@@ -42,25 +30,17 @@ public struct APIManager {
 }
 
 extension APIManager {
-    /// Convenience initializer that initializes `APIManager` to the region or country of an App Store in which the app is available.
-    /// If nil, version check requests are performed against the US App Store.
-    ///
-    /// - Parameter countryCode: The raw country code for the App Store in which the app is available.
-    public init(countryCode: String?) {
-      self.init(country: .init(code: countryCode))
-    }
-
     /// Creates and performs a URLRequest against the iTunes Lookup API.
     ///
     /// - Parameter handler: The completion handler for the iTunes Lookup API request.
-    func performVersionCheckRequest(completion handler: CompletionHandler?) {
-        guard Bundle.main.bundleIdentifier != nil else {
+    func performVersionCheckRequest(configuration: UpdateConfiguration, completion handler: CompletionHandler?) {
+        guard !configuration.bundleIdentifier.isEmpty else {
             handler?(.failure(.missingBundleID))
             return
         }
 
         do {
-            let url = try makeITunesURL()
+            let url = try makeITunesURL(configuration: configuration)
             let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30)
             URLSession.shared.dataTask(with: request) { (data, response, error) in
                 URLCache.shared.removeCachedResponse(for: request)
@@ -112,23 +92,13 @@ extension APIManager {
     ///
     /// - Returns: The iTunes Lookup API URL.
     /// - Throws: An error if the URL cannot be created.
-    private func makeITunesURL() throws -> URL {
+    private func makeITunesURL(configuration: UpdateConfiguration) throws -> URL {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "itunes.apple.com"
         components.path = "/lookup"
 
-        var items: [URLQueryItem] = [URLQueryItem(name: Constants.bundleID, value: Bundle.main.bundleIdentifier)]
-
-        #if os(tvOS)
-        let tvOSQueryItem = URLQueryItem(name: Constants.entity, value: Constants.tvSoftware)
-        items.append(tvOSQueryItem)
-        #endif
-
-        if let countryCode = country.code {
-            let item = URLQueryItem(name: Constants.country, value: countryCode)
-            items.append(item)
-        }
+        let items: [URLQueryItem] = [URLQueryItem(name: Constants.bundleID, value: configuration.bundleIdentifier)]
 
         components.queryItems = items
 
