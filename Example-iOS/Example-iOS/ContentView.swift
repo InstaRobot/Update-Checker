@@ -20,7 +20,7 @@ struct ContentView: View {
     private func startChecker() {
         let configuration = UpdateConfiguration(
             bundleIdentifier: "io.itforces.ios.timetable",
-            daysBeforeCheck: 7
+            daysBeforeCheck: 0
         )
         let checker = Checker(with: configuration)
         checker.check()

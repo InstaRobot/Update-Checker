@@ -9,12 +9,15 @@
 import Foundation
 
 let k_CheckDateInited = "k_CheckDateInited"
+public typealias ResultsHandler = (Result<UpdateResults, KnownError>) -> Void
 
 public struct Checker {
+    public var resultsHandler: ResultsHandler
     private var configuration: UpdateConfiguration
     
-    public init(with configuration: UpdateConfiguration) {
-        self.configuration = configuration
+    public init(with configuration: UpdateConfiguration, results: ResultsHandler) {
+        self.configuration  = configuration
+        self.resultsHandler = results
     }
     
     public func check() {
@@ -28,6 +31,7 @@ public struct Checker {
                     switch result {
                     case .success(let updateResults):
                         print("Model ", updateResults.model)
+                        self.resultsHandler()
                     case .failure(let error):
                         print(error.localizedDescription)
                     }
